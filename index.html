@@ -1,221 +1,354 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title> Портфолио </title>
-    <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,600,700,800&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<html lang="ru" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Резюме</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="./css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/animate.css" rel="stylesheet">
+        <link href="./css/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<body>
-    <header>
-        <div class="container">
-            <div class="row navigation">
-                <a href="#" class="logo"> <img src="pictures/it.png" class="logo_img"> </a>
-                <nav class="top-nav">
-                    <a href="#" class="menu-icon" onclick="showSideMenu()"></a>
-                    <a href="#about" class="nav-item"> О нас </a>
-                    <a href="#our_team" class="nav-item"> Наша команда </a>
-                    <a href="#our_works" class="nav-item"> Наши работы </a>
-                    <a href="#contacts" class="nav-item"> Контакты </a>
-                </nav>
-                <div id="side-menu" class="side-nav">
-                    <a href="#" class="close" onclick="hideSideMenu()">&times;</a>
-                    <a href="#about"> О нас </a>
-                    <a href="#our_team"> Наша команда </a>
-                    <a href="#our_works"> Наши работы </a>
-                    <a href="#contacts"> Контакты </a>
-                </div>
-                <script>
-                    function showSideMenu() {
-                        document.getElementById('side-menu').style.width = '250px';
-                    }
-                    function hideSideMenu() {
-                        document.getElementById('side-menu').style.width = '0';
-                    }
-                </script>
-            </div>
-        </div>
-    </header>
+    </head>
+    <!-- END HEAD -->
 
-    <div class="slider">
-        <div class="item">
-            <img src="pictures/fon1.png" alt="Первый слайд">
-            <div class="slideText"> Качественные сайты  </div>
-        </div>
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
 
-        <div class="item">
-            <img src="pictures/programmer.jpg" alt="Второй слайд">
-            <div class="slideText"> Дружная команда </div>
-        </div>
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
 
-        <div class="item">
-            <img src="pictures/job.jpg" alt="Третий слайд">
-            <div class="slideText"> Удаленная работа </div>
-        </div>
-
-        <a class="prev" onclick="minusSlide()">&#10094;</a>
-        <a class="next" onclick="plusSlide()">&#10095;</a>
-    </div>
-
-    <br>
-
-    <div class="slider-dots">
-        <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
-        <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
-        <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
-    </div>
-
-    <script src="script.js" type="text/javascript"></script>
-
-    <section id="about">
-        <div class="container">
-            <div class="section-title">  <span> О наc </span></div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="./pictures/developer.jpg" class="about-img" alt="">
-                </div>
-                <div class="col-lg-6 services">
-                    <div class="services-box">
-                        <div class="services-icon-box"> 
-                            <i class="fas fa-coins"></i> 
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img" src="img/it.png" alt="Asentus Logo">
+                            </a>
                         </div>
-                        <div class="services-description"> 
-                            <h4 class="services-title"> Доступные цены </h4>
-                            <p class="services-text"> 
-                                Мы не арендуем офис, работаем дистанционно. И Вам не нужно переплачивать лишние деньги за ненужные вам вещи. 
-                            </p>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Главная</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">Обо мне</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Навыки</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Работы</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Контакты</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="services-box">
-                        <div class="services-icon-box"> 
-                            <i class="fab fa-internet-explorer"></i> 
-                        </div>
-                        <div class="services-description"> 
-                            <h4 class="services-title"> Качественные веб-сайты </h4>
-                            <p class="services-text"> При разработке веб-сайтов учитываются функциональность и юзабилити </p>
-                        </div>
-                    </div>
+                    <!-- End Navbar Collapse -->
                 </div>
-            </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
 
-        </section>
-
-
-        <section id="our_team">
-            <div class="section-title">  <span> Наша команда </span></div>
+        <!--========== SLIDER ==========-->
+        <div class="promo-block">
             <div class="container">
-                
-                <div class="card">
-                    <img src="./pictures/m1.jpg">
-                    <div class="card__head">Эсен</div>
+                <div class="row">
+                    <div class="col-sm-6 sm-margin-b-60">
+                        <div class="margin-b-30">
+                            <h1 class="promo-block-title">Исматов <br/> Арлен</h1>
+                            <p class="promo-block-text">Web &amp; UI/UX Designer</p>
+                        </div>
+                        <ul class="list-inline">
+                            <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
+                            <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>
+                            <li><a href="#" class="social-icons"><i class="icon-social-dribbble"></i></a></li>
+                            <li><a href="#" class="social-icons"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="promo-block-img-wrap">
+                            <img class="promo-block-img img-responsive" src="img/my_foto/arl12.png" align="Avatar">
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="./pictures/m2.jpg">
-                    <div class="card__head">Яна</div>
-                </div>
-                <div class="card">
-                    <img src="./pictures/cc.jpg">
-                    <div class="card__head">Арлен</div>
-                </div>
-                <div class="card">
-                    <img src="./pictures/kyl.jpg">
-                    <div class="card__head">Кылыч</div>
-                </div>
+                <!--// end row -->
             </div>
-        </section>
+        </div>
+        <!--========== SLIDER ==========-->
 
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+        <div id="about">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-5 sm-margin-b-60">
+                        <img class="full-width img-responsive" src="img/500x700/500.png" alt="Image">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="section-seperator margin-b-50">
+                            <div class="margin-b-50">
+                                <div class="margin-b-30">
+                                    <h2>Обо мне</h2>
+                                    <p>Профессиональная разработка сайтов любой сложности. Подключение сайта к системе управления. Создание сайта «с нуля» и его дальнейшее сопровождение. PHP, SQL, Flash, MySQL, JavaScript, CSS, XML/XSL/XSLT, HTML/DHTML и др. Графические пакеты: Photoshop, Corel Draw. Готов развиваться и повышать свой профессиональный уровень в выбранном направлении.</p>
+                                </div>
+                                <a download href="img/resum.png"class="btn-theme btn-theme-md btn-default-bg text-uppercase">Cкачать мое резюме</a>
+                            </div>
+                        </div>
 
-<section id="our_works">
-    <div class="container">
-        <div class="section-title"> Наши <span> работы </span></div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./pictures/work1.jpg" alt="work1">
+                        <h2>Мои навыки</h2>
+                        <!-- Progress Box -->
+                        <div class="progress-box">
+                            <h5>HTML <span class="color-heading pull-right">98%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="87"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>CSS <span class="color-heading pull-right">96%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="96"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Graphic Design <span class="color-heading pull-right">87%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="77"></div>
+                            </div>
+                        </div>
+                        <!-- End Progress Box -->
                     </div>
-                    <div class="flip-card-back">
-                      <h4>"Веб-дизайн"</h4> 
-                      <p>Если вы хотите обновить дизайн сайта, мы поможем вам сделать это быстро и качественно.</p> 
-                      <p>
-                        <i class="fa fa-phone" aria-hidden="true"></i>  + 996 700 128 980
-                      </p>
-                    </div>
-                  </div>
                 </div>
-                
+                <!--// end row -->
             </div>
-            <div class="col-lg-4">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./pictures/work3.jpg" alt="work2">
+        </div>
+        <!-- End About -->
+
+        <!-- Experience -->
+        <div id="experience">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="container content-lg">
+                    <div class="row row-space-2 margin-b-4">
+                        <div class="col-md-3 col-sm-6 md-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-mustache"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Доступные Цены</h3>
+                                    <p class="margin-b-5">Я не арендую офис, работаю дистанционно. И Вам не нужно переплачивать лишние деньги за ненужные вам вещи.</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 md-margin-b-4">
+                            <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 class="color-white">Личные качества и ключевые навыки:</h3>
+                                    <p class="margin-b-5"><li>внимательность;</li>
+                                        <li>доброжелательность;</li>
+                                        <li>оперативность;</li>
+                                        <li>способность быстро приобретать новые навыки и умение.</li>
+                                        <li>способность выходить из конфликтных ситуаций</li> </p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 sm-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Дополнительная информация</h3>
+                                    <p class="margin-b-5">есть л/а котегория В, стаж вождения- более 10 лет</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Короткие Сроки</h3>
+                                    <p class="margin-b-5">Обсуждение заказа с клиентами. Составление «Технического задания» для создания интернет-проектов. Разработка дизайн-макетов интернет-проектов. Верстка сайтов. Раскрутка сайтов.</p>
+
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
                     </div>
-                    <div class="flip-card-back">
-                      <h4> "Лендинг пейдж"" </h4> 
-                      <p>Только у нас самые доступные цены! </p> 
-                      <p>
-                        <i class="fa fa-phone" aria-hidden="true"></i>  + 996 700 120 123
-                      </p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img src="./pictures/work2.jpg" alt="work3">
-                    </div>
-                    <div class="flip-card-back">
-                      <h4>"Проектирование"</h4> 
-                      <p> Мы поможем вам привлечь на ваш сайт новых клиентов </p> 
-                      <p>
-                    
-                        <i class="fa fa-phone" aria-hidden="true"></i>  + 996 700 128 988
-                      </p>
-                    </div>
-                  </div>
+                    <!--// end row -->
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <!-- End Experience -->
 
-        <section id="contacts">
-            <div class="container">
-                <form>
-                 <div class="row">
-                    <div class="col-lg-6">
-                      <div class="section-title"> Оставьте свои <span> заявки </span></div> 
-                  </div>
-                  <div class="col-lg-6 right">
-                     <div class="form-group">
-                       <input type="text" class="form-control form-control-lg" placeholder="Ваше ИМЯ" name="">
-                   </div>
-                   <div class="form-group">
-                       <input type="email" class="form-control form-control-lg" placeholder="ВашEmail@email.ru" name="email">
-                   </div>
-                   <div class="form-group">
-                       <textarea class="form-control form-control-lg">
-                       </textarea>
-                   </div>
-                   <input type="submit" class="btn btn-secondary btn-block" value="Отправить" name="">
-               </div>
-           </div>
-       </form>
-   </div>
-</section>      
+        <!-- Work -->
+        <div id="work">
+            <div class="container content-lg">
+                <div class="row margin-b-40">
+                    <div class="col-sm-12">
+                        <h2>Достижения на предыдущих работах:</h2>
+                        <ul><li><p>увеличил количеств клиентов "теплой" базы на 30% за 2 месяца;</p></li>
+                            <li><p>разработал новую методику ведения клиентской базы;</p></li>
+                            <li><p>увеличил продажи компании на 20%;</p></li>
+                            <li><p>уменьшил объём расходов компании на 60%.</p></li>
+                    </div>
+                </div>
+                <!--// end row -->
 
+                <div class="row">
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/work1.jpg" alt="Latest Products Image">
+                            </div>
+                        </div>
+                        <h4><a href="#">Веб-дизайн</a> <span class="text-uppercase margin-l-20">Design</span></h4>
+                        <p>Дизайн на ваш вкус Photoshop,CovelDraw</p>
+                        <a class="link" href="http://it.ru/">Посмотреть</a>
+                    </div>
+                    <!-- End Latest Products -->
 
-</body>
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/work2.jpg" alt="Latest Products Image">
+                            </div>
+                        </div>
+                        <h4><a href="#">Онлайн-Редактор</a> <span class="text-uppercase margin-l-20">Online-Redaktor</span></h4>
+                        <p>Не доконченный сайт могу отредактировать</p>
+                        <a class="link" href="it.ru">Посмотреть</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/04.png" alt="Latest Products Image">
+                            </div>
+                        </div>
+                        <h4><a href="#">Портфолио</a> <span class="text-uppercase margin-l-20">Portfolio</span></h4>
+                        <p>Разные портфолио могу сделать нпрллллкоидщгщ гпанаиолшоьддлисмлмлонанен енананагагг</p>
+                        <a class="link" href="">Посмотреть</a>
+                    </div>
+                    <!-- End Latest Products -->
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Work -->
+ 
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row margin-b-40">
+                        <div class="col-sm-6">
+                           <h2>Мои контакты</h2>
+                            <p>Пишите, звоните, я всегда рад вам помочь!!!</p>
+                        </div>
+                    </div>
+                    <!--// end row -->
+
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 md-margin-b-30">
+                            <h5>Адрес:</h5>
+                            <p>г.Бишкек ул.Анкара 1/55</p>
+                            <h5>Телефон:</h5> 
+                            <p>+996 705 2424 56</p>
+                            <h5>Email:</h5>
+                            <a href="mailto:#">iarnel@inbox.ru</a>
+                        </div>
+                        <div class="col-md-6 col-xs-6 md-margin-b-30">
+                            <form>
+                             <div class="row">
+                                  <div class="section-title"><h2> Оставьте свои  заявки</h2> </div> 
+                              
+                                 <div class="form-group">
+                                   <input type="text" class="form-control form-control-lg" placeholder="Ваше ИМЯ" name="">
+                               </div>
+                               <div class="form-group">
+                                   <input type="email" class="form-control form-control-lg" placeholder="Email@email.com" name="email">
+                               </div>
+                               <div class="form-group">
+                                   <textarea class="form-control form-control-lg">
+                                   </textarea>
+                               </div>
+                               <input type="submit" class="btn btn-secondary btn-block" value="Отправить" name="">
+                        
+                       </div>
+                   </form>
+                        </div>
+                        
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img class="footer-logo" src="img/it.png" alt="it Logo">
+                    </div>
+                    <div class="col-xs-6 text-right sm-text-left">
+                        <p class="margin-b-0"><a class="fweight-700" href="#">it start</a> </p>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </footer>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Вверх</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="./js/jquery.easing.js" type="text/javascript"></script>
+        <script src="./js/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="./js/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="./js/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="./js/jquery.parallax.min.js" type="text/javascript"></script>
+        <script src="./js/jquery.appear.js" type="text/javascript"></script>
+        <script src="./js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="./js/layout.min.js" type="text/javascript"></script>
+        <script src="./js/progress-bar.min.js" type="text/javascript"></script>
+        <script src="./js/swiper.min.js" type="text/javascript"></script>
+        <script src="./js/wow.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
 </html>
